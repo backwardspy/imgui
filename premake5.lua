@@ -9,11 +9,17 @@ project "imgui"
     objdir ("bin/obj/"..target_triple.."/%{prj.name}")
 
     files {
-        "src/**.cpp",
-        "include/**.h",
+        "imgui.cpp",
+        "imgui_draw.cpp",
+        "imgui_widgets.cpp",
+        "imgui_demo.cpp",
+        "backends/imgui_impl_opengl3.cpp",
     }
 
-    includedirs "include"
+    includedirs {
+        ".",
+        "%{wks.location}/leviathan/vendor/glad/include"
+    }
 
     filter "configurations:debug"
         defines "DEBUG"
