@@ -13,12 +13,10 @@ project "imgui"
         "imgui_draw.cpp",
         "imgui_widgets.cpp",
         "imgui_demo.cpp",
-        "backends/imgui_impl_opengl3.cpp",
     }
 
     includedirs {
         ".",
-        "%{wks.location}/leviathan/vendor/glad/include"
     }
 
     filter "configurations:debug"
